@@ -1,0 +1,61 @@
+h1 {
+  font-size: 56px;
+  margin-bottom: 15px;
+}
+
+p {
+  color: #8d8d8d;
+}
+
+.container {
+  font-family: 'Karla', sans-serif;
+  line-height: 1.5;
+  max-width: 960px;
+  margin: 50px auto;
+}
+
+.header {
+  text-align: center;
+  flex-basis: 70%;
+  margin-bottom: 40px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.module {
+  flex-basis: 50%;
+  display: flex;
+  padding: 30px;
+}
+
+img {
+  height: 80px;
+}
+
+.text-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 10px;
+}
+
+.text-col > h4 {
+  flex-basis: 30%;
+  margin-bottom: 5px;
+}
+
+.text-col > p {
+  margin: 0;
+}
+
+button {
+  background-color: white;
+  color: #d14c45;
+  border: 2px solid #d14c45;
+  padding: 10px 40px;
+  margin-top: 20px;
+}
