@@ -7,6 +7,7 @@ h2 {
 }
 
 p {
+  font-family: Avenir, sans-serif;
   line-height: 1.6;
 }
 
@@ -346,4 +347,101 @@ li > span {
 
 .section-list > ol > li > p {
   margin-bottom: 90px;
+}
+
+/* about-us page content */
+
+.about-header {
+  margin-top: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-header > #about-header-img {
+  position: relative;
+  width: 1600px;
+  height: 760px;
+  object-fit: cover;
+  filter: contrast(70%) brightness(85%);
+  margin: 0;
+}
+
+.about-header > h2 {
+  font-size: 2.4em;
+  position: absolute;
+  left: 250px;
+  top: 480px;
+  color: white;
+  z-index: 2;
+}
+
+.page-content > .about-header > p {
+  font-family: Avenir, sans-serif;
+  font-weight: bolder;
+  font-size: 1.2em;
+  position: absolute;
+  left: 250px;
+  top: 660px;
+  width: 40%;
+  color: white;
+}
+
+.what-we-believe-sect {
+  display: flex;
+  flex-direction: column;
+  margin: 150px auto 200px;
+  width: 40%;
+}
+
+.what-we-believe-sect > h2 {
+  font-size: 2.2em;
+  text-align: center;
+}
+
+.our-team-heading {
+  text-align: center;
+}
+
+.our-team-sect {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 20px auto 100px;
+  width: 90%;
+}
+
+.team-members {
+  margin: 30px 60px;
+  flex-basis: calc(25%);
+  text-align: center;
+}
+
+.member-photo-border > img {
+  width: calc(70%);
+  border: 0 none;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.advisory-board-sect > h2 {
+  text-align: center;
+}
+
+.board-members {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.members-col {
+  text-align: center;
+}
+
+.our-story-sect {
+  width: 40%;
+  margin: 200px auto;
+}
+
+.our-story-sect > h2 {
+  text-align: center;
 }
