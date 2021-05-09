@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header class="canvas-header">
     <a href="index.html">
@@ -26,44 +28,38 @@
   </header>
 
   <div class="page-content">
-    <div class="hero-banner">
-      <img id="hero-img" src="images/hero.jpg" alt="Hero Image">
-      <h2>
-        The EMR Reimagined for <br>
-        Primary Care
-      </h2>
-      <p>
-        Can't remember the last time you talked with a patient without
-        focusing on the EMR? Canvas lets you rediscover joy in the work you do.
-        Capture meaningful data, identify gaps in care, and move seamlessly
-        between tasks within the platform. You stay present with patients while
-        your whole care team stays up-to-speed. Be a better doctor with Canvas,
-        designed for primary care providers with the help of primary care providers.
-      </p>
-      <button class="blue-rounded-btn">Get Started</button>
-    </div>
-
-    <div class="prefer-canvas-section">
-      <div class="prefer-heading">
-        <h2>
-          Clinicians Prefer Canvas
-        </h2>
+    <div class="contact-us-form">
+      <div class="contact-us-left">
+        <h2>Get in touch with Canvas</h2>
+        <a class="blue-text no-underline-link" href="tel:8005555555">(800) 555-5555</a>
         <p>
-          Physician-owned primary care practice across the country have <br>
-          already made Canvas the fabric of their care.
+          We would be delighted to show you a demo, put you in touch with current
+          customers, get you started with access to a sandbox, and answer any
+          questions you have about working with Canvas.
         </p>
       </div>
-      <div class="clinic-locations">
-        <div class="location-left-col">
-          <h4>Cascade Family Practice, Portland OR</h4>
-          <h4>Temescal Creek Medicine, Oakland CA</h4>
-          <h4>San Juan Healthcare, Friday Harbor WA</h4>
-        </div>
-        <div class="location-right-col">
-          <h4>Ward Medical Clinic, Bonifay FL</h4>
-          <h4>Caribou Medical, Towanda PA</h4>
-          <h4>Bay Tree Family Care, Red Bay AL</h4>
-        </div>
+      <div class="contact-us-right">
+        <label for="contact-name">
+          <input class="canvas-input" type="text" name="contact-name"
+          id="contact-name" placeholder="Name">
+        </label>
+        <label for="contact-practice">
+          <input class="canvas-input" type="text" name="contact-practice"
+          id="contact-practice" placeholder="Practice Name">
+        </label>
+        <label for="contact-email">
+          <input class="canvas-input" type="text" name="contact-email"
+          id="contact-email" placeholder="email@domain.com">
+        </label>
+        <label for="contact-phone">
+          <input class="canvas-input" type="text" name="contact-phone"
+          id="contact-phone" placeholder="Phone (optional)">
+        </label>
+        <label for="tell-us-more">
+          <textarea class="canvas-input" name="tell-us-more" id="tell-us-more" wrap="soft" rows="3"
+            placeholder="Tell us more about your practice and interest in Canvas. (optional)"></textarea>
+        </label>
+        <button>Submit</button>
       </div>
     </div>
   </div>
@@ -107,4 +103,5 @@
     </div>
   </div>
 </body>
+
 </html>

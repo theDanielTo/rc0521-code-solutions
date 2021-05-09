@@ -21,6 +21,10 @@ p {
   color: #5d5d5d;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 /* utility classes */
 .gray-text {
   color: #a8a8a8;
@@ -54,10 +58,12 @@ p {
   border-bottom: 1px solid;
   padding: 30px;
   margin: 40px 0 60px;
+  background-color: #fafafa;
 }
 
 .canvas-input::placeholder {
   color: #d6d1d1;
+  font-size: 0.8em;
 }
 
 /* canvas-header */
@@ -492,4 +498,46 @@ li > span {
 .blog-post > a > h3 {
   margin: 10px 0;
   font-size: 2.3em;
+}
+
+/* contact-us.html page content */
+.contact-us-form {
+  width: 95%;
+  margin: 200px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-us-left,
+.contact-us-right {
+  flex-basis: 45%;
+}
+
+.contact-us-left {
+  padding-right: 160px;
+  font-size: 1.8em;
+}
+
+.contact-us-left > a {
+  font-size: 1.5em;
+}
+
+.contact-us-right {
+  display: flex;
+  flex-direction: column;
+
+  /* justify-content: center; */
+}
+
+#tell-us-more {
+  overflow-wrap: break-word;
+}
+
+.contact-us-right > button {
+  background-color: #294464;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 20px;
+  font-size: 1.2em;
+  margin: 0 40%;
 }
