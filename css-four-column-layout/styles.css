@@ -1,0 +1,33 @@
+html {
+  background-color: #f7f8fa;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+}
+
+header > h1 {
+  font-weight: 800;
+}
+
+.screens {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.screen-col {
+  flex-basis: 25%;
+}
+
+.screen-col > img {
+  width: 80%;
+}
+
+.screen-col > .icon-img {
+  width: 20%;
+}
+
+.screen-col > p {
+  font-weight: 500;
+  margin: 30px;
+}
