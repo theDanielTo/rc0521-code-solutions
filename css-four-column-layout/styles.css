@@ -1,0 +1,40 @@
+html {
+  background-color: #f7f8fa;
+  font-family: Barlow, sans-serif;
+  text-align: center;
+}
+
+header > h1 {
+  font-weight: bold;
+}
+
+section {
+  font-size: 0.8rem;
+}
+
+.screens {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.screen-col {
+  flex-basis: 25%;
+}
+
+.screen-col > img {
+  width: 85%;
+}
+
+.screen-col > .icon-img {
+  width: 20%;
+}
+
+.screen-col > h3 {
+  font-weight: bold;
+}
+
+.screen-col > p {
+  margin: 30px;
+}
