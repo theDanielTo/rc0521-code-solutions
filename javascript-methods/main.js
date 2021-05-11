@@ -1,3 +1,4 @@
+// Math objects
 var num1 = 5;
 var num2 = 10;
 var num3 = 100;
@@ -13,6 +14,7 @@ console.log('Value of randomIndex:', randomIndex);
 var randomHero = heroes[randomIndex];
 console.log('Value of randomHero:', randomHero);
 
+// Array methods
 var library = [
   {
     title: 'The Way of Kings',
@@ -49,6 +51,7 @@ library.splice(1, 1);
 console.log('library.splice(1, 1):', library);
 console.log('Final value of library:', library);
 
+// String methods
 var fullName = 'Daniel To';
 var firstAndLastName = fullName.split(' ');
 console.log('Value of firstAndLastName:', firstAndLastName);
