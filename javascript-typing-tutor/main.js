@@ -2,7 +2,8 @@ const quotes = [
   "Frankly, my dear, I don't give a damn.",
   'May the force be with you.',
   'Stella! Hey, Stellaaaaaaaaaaaaaa',
-  "Here's Johnny!"
+  "Here's Johnny!",
+  'We got this team! :D'
 ];
 
 const tutorText = document.querySelector('.incomplete');
@@ -16,6 +17,12 @@ let textLength = tutorText.textContent.length + 1;
 
 document.addEventListener('keydown', function (event) {
   if (tutorText.textContent.length === 0) {
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        finishedCard.className = 'finished-card hidden';
+        resetText();
+      }
+    });
     finishedCard.className = 'finished-card';
     completedText.textContent += currentLetter.textContent;
     currentLetter.textContent = '';
