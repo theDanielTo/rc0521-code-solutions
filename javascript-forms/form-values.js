@@ -12,4 +12,5 @@ contactForm.addEventListener('submit', function (event) {
   userData.email = contactForm.elements.email.value;
   userData.message = contactForm.elements.message.value;
   console.log(userData);
+  contactForm.reset();
 });
