@@ -16,7 +16,7 @@ body {
 
 h1 {
   padding: 10px 30px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.2);
   font-size: 3em;
   box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem black;
 }
@@ -39,9 +39,8 @@ span.complete {
 }
 
 .finished-card {
-  background-color: white;
-  border: 1px solid black;
-  padding: 10px 0 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px 0;
   box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem black;
 }
 
