@@ -47,6 +47,7 @@ playAgainButton.addEventListener('click', function (event) {
 });
 
 function nearestHundredth(x) {
+  if (x <= 0) return 0;
   return Number.parseFloat(x).toFixed(2);
 }
 
