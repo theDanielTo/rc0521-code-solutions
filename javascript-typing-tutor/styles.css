@@ -3,6 +3,7 @@ html {
 }
 
 body {
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
   box-sizing: border-box;
   margin: 0;
   width: 100%;
@@ -14,8 +15,10 @@ body {
 }
 
 h1 {
+  padding: 10px 30px;
+  background-color: white;
   font-size: 3em;
-  box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem black;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem black;
 }
 
 h2 {
@@ -36,8 +39,10 @@ span.complete {
 }
 
 .finished-card {
+  background-color: white;
   border: 1px solid black;
   padding: 10px 0 40px;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem black;
 }
 
 .hidden {
@@ -51,7 +56,7 @@ button {
   border: none;
   border-radius: 10px;
   padding: 10px 40px;
-  box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem black;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem black;
 }
 
 button:hover {
