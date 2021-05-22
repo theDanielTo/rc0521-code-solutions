@@ -11,14 +11,29 @@
 </head>
 <body>
   <div class="container">
-    <h1>
-      <span class="complete"></span><u class="current-letter">l</u><span class="incomplete">orem ipsum</span>
-    </h1>
-    <h2>Your typing accuracy is <span id="accuracy">100%</span></h2>
+    <div class="input-form">
+      <form>
+        <label for="user-phrase">
+          <input autofocus name="user-phrase" type="text" placeholder="What phrase would you like to practice?">
+        </label>
+      </form>
+      <button id="start-btn">Start Tutor</button>
+    </div>
+
+    <div class="tutor-text hidden">
+      <h1>
+        <span class="complete"></span><u class="current-letter"></u><span class="incomplete"></span>
+      </h1>
+    </div>
+
+    <div class="typing-acc hidden">
+      <h2>Your typing accuracy is <span id="accuracy">100%</span></h2>
+    </div>
+
     <div class="finished-card hidden">
       <h2 class="play-again-text">Would you like to play again?</h2>
-      <button>Play Again</button>
-      <h2 class="play-again-text">Or press 'Enter' to play again</h2>
+      <button id="play-again-btn">Play Again</button>
+      <!-- <h2 class="play-again-text">Or press 'Enter' to play again</h2> -->
     </div>
   </div>
   <script src="main.js"></script>

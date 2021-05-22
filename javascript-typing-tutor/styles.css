@@ -3,22 +3,54 @@ html {
 }
 
 body {
-  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  background: linear-gradient(0.25turn, #3f87a6, #c3ff95, #f69d3c);
   box-sizing: border-box;
   margin: 0;
+}
+
+.container {
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-h1 {
-  padding: 10px 30px;
+.input-form {
+  width: 50%;
+  padding: 0;
+}
+
+input {
+  font-family: Courgette, sans-serif;
+  width: 85%;
+  padding: 20px 60px;
+  margin-bottom: 40px;
   background-color: rgba(255, 255, 255, 0.2);
-  font-size: 3em;
+  text-align: center;
+  font-size: 2em;
   box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem black;
+}
+
+input::placeholder {
+  font-family: Courgette, sans-serif;
+  color: black;
+  font-size: 1.2em;
+}
+
+.tutor-text {
+  max-width: 80%;
+  padding: 10px 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 1.5em;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem black;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
 }
 
 h2 {
@@ -40,7 +72,7 @@ span.complete {
 
 .finished-card {
   background-color: rgba(255, 255, 255, 0.2);
-  padding: 10px 0;
+  padding: 10px 80px;
   box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem black;
 }
 
@@ -55,6 +87,7 @@ button {
   border: none;
   border-radius: 10px;
   padding: 10px 40px;
+  margin-bottom: 40px;
   box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem black;
 }
 
