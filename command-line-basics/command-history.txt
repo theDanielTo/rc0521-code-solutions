@@ -1,0 +1,447 @@
+    1  git config --global --list
+    2  git config --global user.name "theDanielTo"
+    3  git config --global user.email "dto1989@gmail.com"
+    4  git config --global --list
+    5  ls
+    6  cd repos/rc0521-code-solutions/
+    7  http http://www.example.com
+    8  ls
+    9  cd http-messages
+   10  http http://www.example.com
+   11  http https://usairashraf.dev/example/
+   12  http https://uzairashraf.dev/example/
+   13  http --verbose https://uzairashraf.dev/example/
+   14  http --body GET https://jsonplaceholder.typicode.com/users > users.json
+   15  http --body GET https://azairashraf.dev/example/
+   16  http --body GET https://uzairashraf.dev/example/
+   17  http --body GET https://uzairashraf.dev/example/ > index.html
+   18  gst
+   19  git status
+   20  git add .
+   21  git commit -a
+   22  git pull origin master
+   23  git status
+   24  git restore --stages .
+   25  git restore --staged .
+   26  git status
+   27  git add .
+   28  git status
+   29  cd ..
+   30  git status
+   31  git add .
+   32  git commit -m "http-messages"
+   33  git push origin master
+   34  git status
+   35  git checkout -b javascript-ajax
+   36  git status
+   37  git add .
+   38  git commit -m "Completed javascript-ajax"
+   39  git push origin javascript-ajax
+   40  cd
+   41  config/aliases
+   42  cls
+   43  clear
+   44  pwd
+   45  history
+   46  e.
+   47  gst
+   48  alias gst
+   49  cd repos/rc0521-code-solutions/
+   50  gst
+   51  git status
+   52  pwd
+   53  git checkout master
+   54  git pull origin master
+   55  gst
+   56  cd repos/rc0521-code-solutions/
+   57  gst
+   58  gts
+   59  gst
+   60  %CMDER_ROOT%\config\user_aliases.cmd
+   61  ls
+   62  cmderr
+   63  gst
+   64  init
+   65  cd repos/rc0521-code-solutions/alias gst
+   66  alias
+   67  la
+   68  ll
+   69  ls
+   70  alert
+   71  la
+   72  lfz
+   73  cd repos/rc0521-code-solutions/
+   74  e.
+   75  alias gst='git status'
+   76  gst
+   77  cd repos/driving-game/
+   78  git status
+   79  git commit -m "Allow car to stop with 'spacebar' and start again with 'spacebar'"
+   80  git push origin issue-4-stop-car
+   81  git status
+   82  git add .
+   83  git commit -m "Removed whitespace"
+   84  git push origin issue-4-stop-car
+   85  gco master
+   86  git checkout master
+   87  git pull origin master
+   88  gco -b issue-5-steer-car
+   89  git checkout -b issue-5-steer-car
+   90  git status
+   91  git add .
+   92  git commit -m "Created turnCar function & completed issue 5"
+   93  git push origin issue-5-steer-car
+   94  git checkout master
+   95  git pull origin master
+   96  git checkout -b issue-6-choose-car
+   97  gst
+   98  git status
+   99  git add .
+  100  git commit -m "Added more car options | Added game start menu | Added start button"
+  101  git commit -m "Added more car options | Added game start menu | Added start button" --no-verify
+  102  git status
+  103  git add .
+  104  git commit -m "Rotated car images to point right | drop down menu chooses and displays car correctly | Styled button and select menu"
+  105  git push origin issue-6-choose-car
+  106  cd repos
+  107  git clone git@github.com:theDanielTo/ajax-project.git
+  108  cd ajax-project
+  109  npm ci
+  110  git status
+  111  git add .
+  112  git commit -m "HTML for home page finished. #1"
+  113  git status
+  114  git commit -m "Added 'ingredients' page | Styled both pages | view-swapping between home & 'ingredients' | API request for ingredients list. #1"
+  115  git commit -m "Added 'ingredients' page | Styled both pages | view-swapping between home & 'ingredients' | API request for ingredients list. #1" --no-verify
+  116  git checkout -b issue-1-view-ingredients-list
+  117  git status
+  118  git add .
+  119  git commit -m "Added 'ingredients' page | Styled both pages | view-swapping between home & 'ingredients' | API request for ingredients list. #1" --no-verify
+  120  git status
+  121  git add .
+  122  git commit -m "Cleaned up html + css. #1"
+  123  git commit -m "Cleaned up html + css. #1" --no-verify
+  124  git status
+  125  git add .
+  126  git commit -m "Made screens reponsive from small (mobile) --> large (browser). #1"
+  127  git status
+  128  repos/ajax-project/
+  129  cd repos/ajax-project/
+  130  git status
+  131  git add .
+  132  git commit -m "Completed issue 1 | Finished positioning HTML for @media => large screen | Cleaned up additional CSS | Added event listener to browser view ingredients list page"
+  133  git status
+  134  git push origin issue-1-view-ingredients-list
+  135  git checkout master
+  136  git pull origin master
+  137  git checkout -b issue-2-view-categories
+  138  git status
+  139  git add .
+  140  g
+  141  cd repos/ajax-project/
+  142  git status
+  143  git commit -m "Populate categories list with large nav bar"
+  144  git add .
+  145  git commit -m "Populate categories list with large nav bar"
+  146  git status
+  147  git add .
+  148  git commit -m "Properly set colors for selected icons/text | cleaned up main.js | changed look of list items. #2"
+  149  git status
+  150  git add .
+  151  git commit -m "Change header text when changing pages | 'really' properly set colors.... #2"
+  152  git status
+  153  git commit -am "Request data for filter by category | handle click on category list item shows data. #2"
+  154  git commit -am "Request data for filter by category | handle click on category list item shows data. #2" --no-verify
+  155  git status
+  156  git commit -am "Clicking on category on list will filter drinks with in that category | show all drinks on list | styled drinks row. #2"
+  157  git status
+  158  git add .
+  159  git commit -m "Removed useless buttons | finished feature 2. #2"
+  160  git push origin issue-2-view-categories
+  161  git status
+  162  git checkout master
+  163  git stash --include-untracked
+  164  git checkout master
+  165  git status
+  166  git checkout issue-2-view-categories
+  167  git checkout master
+  168  git pull origin master
+  169  git checkout -b issue-3-search-drink
+  170  git status
+  171  git commit -am "Fixed header text inplace of the old buttons. #3"
+  172  git stattus
+  173  git status
+  174  git add -am "Organized styles.css"
+  175  git commit -am "Organized styles.css"
+  176  git status
+  177  git commit -am "Search icon brings up 'search' page | Added input & styled. #3"
+  178  git commit -am "Search icon brings up 'search' page | Added input & styled. #3" --no-verify
+  179  git status
+  180  git commit -am "Pressing 'enter' brings up a list of drinks with user input in its name. #3"
+  181  git status
+  182  git commit -m "Search page works for browser view. #3"
+  183  git commit -am "Search page works for browser view. #3"
+  184  git push origin issue-3-search-drink
+  185  git status
+  186  git checkout master
+  187  git pull origin master
+  188  git checkout -b issue-3-filter-ingredient
+  189  git status
+  190  cd repos/ajax-project/
+  191  git status
+  192  git checkout master
+  193  git pull origin master
+  194  git checkout -b issue-7-delete-from-favorites
+  195  git status
+  196  git commit -am "Browser view home page now scales with view height| changed hearts to be filled in on click. #6"
+  197  git commit -am "Browser view home page now scales with view height| changed hearts to be filled in on click. #6" --no-verify
+  198  git status
+  199  git commit -am "Clicking on trash can icon will bring up modal. #7"
+  200  git commit -am "Clicking on trash can icon will bring up modal. #7" --no-verify
+  201  git status
+  202  git commit -am "Cancel button hides modal | Yes button removes child from list & removes favoriteDrinks using drink-id attribute. #7"
+  203  git commit -am "Cancel button hides modal | Yes button removes child from list & removes favoriteDrinks using drink-id attribute. #7" --no-verify
+  204  git status
+  205  git push origin issue-7-delete-from-favorites
+  206  git checkout master
+  207  git pull origin master
+  208  git status
+  209  git checkout -b issue-8-polish-add-text
+  210  git commit -am "Added text to all pages | Corrections to page sizes"
+  211  git commit -am "Added text to all pages | Corrections to page sizes" --no-verify
+  212  git status
+  213  git commit -am "Finished polish: add text"
+  214  git commit -am "Finished polish: add text" --no-verify
+  215  git push origin issue-8-polish-add-text
+  216  git checkout master
+  217  git pull origin master
+  218  git checkout -b issue-9-design-add-animations
+  219  git status
+  220  git commit -am "Added animations to nav links/icons, home logo, modal box. #9."
+  221  cd repos/ajax-project/
+  222  git stattus
+  223  git status
+  224  git commit -am "Correctly position main logo with seperate components. #9"
+  225  git commit -am "Resize text & icons. #9"
+  226  git status
+  227  git commit -am "Remove commented out code. #9"
+  228  git push origin issue-9-design-add-animations
+  229  git checkout master
+  230  git pull origin master
+  231  git checkout -b issue-10-see-details
+  232  git status
+  233  git commit -am "Clicking on image renders additional details. #10"
+  234  git commit -am "Changed logo, header, and nav positions to be fixed to better fit drink details page. #10"
+  235  git status
+  236  git commit -am "Resized detailed drink page to fit browser view. #10"
+  237  git status
+  238  git push origin issue-10-see-details
+  239  git checkout master
+  240  git pull origin master
+  241  git checkout -b refactor-code
+  242  git status
+  243  git commit -am "Refactored handle/render ingredients list, categories list, drink lists"
+  244  git stattus
+  245  git status
+  246  git commit -am "Handle random refactored"
+  247  git commit -am "Handle drink image click refactored"
+  248  git commit -am "Handle search refactored"
+  249  git status
+  250  git commit -am "Refactored nav icons/links"
+  251  git status
+  252  git commit -am "Moved helper functions to bottom"
+  253  git status
+  254  git push origin refactor-code
+  255  git status
+  256  git commit -am "Move gsap animation into handleNavClick"
+  257  git push origin refactor-code
+  258  cd repos/ajax-project/
+  259  git status
+  260  git checkout master
+  261  git stash
+  262  git checkout master
+  263  git pull origin master
+  264  git status
+  265  git commit -am "Fixed small bug that didn't allow deleting drinks from 'favorites' page | Fixed GSAP animations."
+  266  git pull origin master
+  267  cd repos/ajax-project/
+  268  git status
+  269  git pull origin
+  270  git checkout -b code-refactor-2
+  271  git commit -am "Stored API url in variable."
+  272  cd repos/ajax-project/
+  273  git status
+  274  git commit -am "handleIngredientClick, handleCategoryClick, handleSearch calls getHttpRequest()."
+  275  git status
+  276  git commit -am "handleRandom, renderIngredientsList, renderCategoriesList calls getHttpRequest()."
+  277  git status
+  278  git commit -am "renderDrinkRow calls getHttpRequest()."
+  279  git status
+  280  git commit -am "Made selected nav elements change colors dynamically. Repositioned pages on browser view"
+  281  git status
+  282  git commit -am "getHttpRequest pipeline request.response to callback"
+  283  git status
+  284  git commit -am "Condensed similar functions into one."
+  285  git status
+  286  git commit -am "Fixed search text input not showing"
+  287  git push origin code-refactor-2
+  288  git checkout 
+  289  git checkout master
+  290  git checkout code-refactor-2
+  291  git status
+  292  git commit -am "Removed old deprecated functions. Removed white space. Fixed nav link animations."
+  293  git push origin code-refactor-2
+  294  git checkout master
+  295  git pull origin master
+  296  cd repos/rc0521-code-solutions/
+  297  git checkout -b es6-const-let
+  298  git statuts
+  299  git status
+  300  git statuts
+  301  git status
+  302  git commit -am "Completed es6-const-let"
+  303  git push origin es6-const-let
+  304  git status
+  305  git add .
+  306  git commit -m "Completed es6-const-let"
+  307  git push origin es6-const-let
+  308  git checkout master
+  309  git pull origin master
+  310  git checkout -b es6-destructuring
+  311  git add .
+  312  git commit -m "Completed es6-destructuring"
+  313  git add .
+  314  git commit -m "Completed es6-destructuring"
+  315  git push origin es6-destructuring
+  316  git status
+  317  git add .
+  318  git commit -m "Step 15"
+  319  git push origin es6-destructuring
+  320  git checkout master
+  321  git pull origin
+  322  git checkout -b es6-template-literals
+  323  git add .
+  324  git commit -m "Completed es6-template-literals"
+  325  git push origin es6-template-literals
+  326  git status
+  327  git add .
+  328  git commit -m "Converted applePen back into native string"
+  329  git push origin es6-template-literals
+  330  git status
+  331  git add .
+  332  git commit -m "Converted lines 13 & 28 into template literals"
+  333  git push origin es6-template-literals
+  334  git checkout master
+  335  git pull origin
+  336  git checkout -b es6-arrow-functions
+  337  git status
+  338  git add .
+  339  git commit -m "Completed es6-arrow-functions"
+  340  git push origin es6-arrow-functions
+  341  git checkout master
+  342  git pull origin
+  343  git status
+  344  git commit -am "es6-arrow-functions refactored some methods into arrow"
+  345  git push origin
+  346  git checkout command-line-basics
+  347  cd
+  348  cd repos/rc0521-code-solutions/
+  349  cd command-line-basics/
+  350  pwd
+  351  man man
+  352  man cat
+  353  cat
+  354  cat hubris.txt 
+  355  cat lol.txt 
+  356  cat laziness.txt 
+  357  cat impatience.txt 
+  358  cat and-then.txt 
+  359  cat laziness.txt impatience.txt hubris.txt 
+  360  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  361  cat three-virtues.txt 
+  362  clear
+  363  cat three-virtues.txt 
+  364  man ls
+  365  ls
+  366  ls -a
+  367  ls -F
+  368  man ls
+  369  ls lfz-staff/
+  370  ls lfz-staff/ -a
+  371  ls lfz-staff/ -F
+  372  ls -aF lfz-staff > lfz-staff/contents.txt
+  373  cat lfz-staff/contents.txt 
+  374  man pwd
+  375  pwd
+  376  pwd > i-was-here.txt
+  377  ls
+  378  cat i-was-here.txt 
+  379  man echo
+  380  echo 'Hello, World!'
+  381  echo 'Hello, World!' > hello.txt
+  382  ls
+  383  cat hello.txt 
+  384  man touch
+  385  cd repos/
+  386  cd rc0521-code-solutions/command-line-basics/
+  387  man touch
+  388  touch tag-youre-it.txt
+  389  touch snoot/boop.txt
+  390  man mkdir
+  391  ls
+  392  mkdir parent
+  393  ls
+  394  man mkdir
+  395  mkdir -p parent/child/grandchild
+  396  ls
+  397  cd parent
+  398  ls
+  399  cd child
+  400  ls
+  401  cd ..
+  402  ls -a
+  403  touch parent/child/grandchild .gitkeepp
+  404  ls parent/child/grandchild/
+  405  cd parent/child/grandchild/
+  406  ls
+  407  cd
+  408  cd repos/rc0521-code-solutions/command-line-basics/
+  409  touch parent/child/grandchild .gitkeep
+  410  man touch
+  411  cd parent/child/grandchild/
+  412  touch .gitkeep
+  413  ls
+  414  cd .. ..
+  415  cd ..
+  416  cd parent/child/grandchild/
+  417  ls -a
+  418  man mv
+  419  ls
+  420  cd ..
+  421  cd.. 
+  422  cd ..
+  423  ls
+  424  mv pokimans pokemon
+  425  mv pokiemans pokemon
+  426  ls
+  427  man rm
+  428  ls
+  429  rm lol.txt
+  430  ls
+  431  ls -a
+  432  rm -r kill-me/
+  433  ls
+  434  ls -a
+  435  clear
+  436  man cp
+  437  ls
+  438  man cp
+  439  cp and-then.txtt no-and-then.txtt
+  440  cp and-then.txtt no-and-then.txt
+  441  cp and-then.txt no-and-then.txt
+  442  ls
+  443  cat no-and-then.txt 
+  444  cat and-then.txt 
+  445  man history
+  446  history
+  447  history > command-history.txt
