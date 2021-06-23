@@ -6,13 +6,12 @@ const noteId = process.argv[3];
 
 switch (operation) {
   case 'read':
-    for (const note in data.notes) {
-      console.log(note + ':', data.notes[note]);
+    for (const noteId in data.notes) {
+      console.log(noteId + ':', data.notes[noteId]);
     }
     break;
   case 'create':
-    data.notes[data.nextId] = process.argv[3];
-    data.nextId++;
+    data.notes[data.nextId++] = process.argv[3];
     updateDataJson();
     break;
   case 'delete':
@@ -36,7 +35,7 @@ switch (operation) {
 }
 
 function updateDataJson() {
-  fs.writeFile('data.json', JSON.stringify(data, null, 2), err => {
+  fs.writeFile('data.json', JSON.stringify(data, null, 2) + '\n', err => {
     if (err) throw err;
   });
 }
