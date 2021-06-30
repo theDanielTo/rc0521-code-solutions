@@ -1,5 +1,5 @@
 {
-  "nextId": 11,
+  "nextId": 12,
   "notes": {
     "2": {
       "id": 2,
@@ -14,12 +14,12 @@
       "content": "A closure is formed when a function retains access to variables in its lexical scope."
     },
     "9": {
-      "id": 9,
-      "content": "Inertia is a property of matter."
+      "content": "This note about inertia remains unchanged.",
+      "id": 9
     },
-    "10": {
+    "11": {
       "content": "new note1",
-      "id": 10
+      "id": 11
     }
   }
 }

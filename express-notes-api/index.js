@@ -26,14 +26,7 @@ app.post('/api/notes', (req, res, err) => {
     const noteObj = req.body;
     noteObj.id = data.nextId;
     data.notes[data.nextId++] = noteObj;
-    const dataJson = JSON.stringify(data, null, 2);
-    fs.writeFile('./data.json', dataJson, 'utf8', err => {
-      if (err) {
-        throw res.status(500).json({ error: 'an unexpected error occured.' });
-      } else {
-        res.status(201).json(noteObj);
-      }
-    });
+    updateDataJson(201, noteObj, res);
   }
 });
 
@@ -44,21 +37,12 @@ app.delete('/api/notes/:id', (req, res) => {
     res.status(404).json({ error: 'no notes with that id' });
   } else {
     delete data.notes[req.params.id];
-    const dataJson = JSON.stringify(data, null, 2);
-    fs.writeFile('./data.json', dataJson, 'utf8', err => {
-      if (err) {
-        throw res.status(500).json({ error: 'an unexpected error occured.' });
-      } else {
-        res.status(204).json(req.body);
-      }
-    });
+    updateDataJson(204, req.body, res);
   }
 });
 
 app.put('/api/notes/:id', (req, res) => {
-  if (res.statusCode !== 200) {
-    res.status(500).json({ error: 'an unexpected error occured.' });
-  } else if (req.params.id < 0 || isNaN(req.params.id)) {
+  if (req.params.id < 0 || isNaN(req.params.id)) {
     res.status(400).json({ error: 'id must be a positive number' });
   } else if (!req.body.content) {
     res.status(400).json({ error: 'content is a required field' });
@@ -68,16 +52,20 @@ app.put('/api/notes/:id', (req, res) => {
     const noteObj = req.body;
     noteObj.id = parseInt(req.params.id);
     data.notes[req.params.id] = noteObj;
-    const dataJson = JSON.stringify(data, null, 2);
-    fs.writeFile('./data.json', dataJson, 'utf8', err => {
-      if (err) {
-        throw res.status(500).json({ error: 'an unexpected error occured.' });
-      } else {
-        res.status(200).json(noteObj);
-      }
-    });
+    updateDataJson(200, noteObj, res);
   }
 });
+
+function updateDataJson(code, json, res) {
+  const dataJson = JSON.stringify(data, null, 2);
+  fs.writeFile('./data.json', dataJson, 'utf8', err => {
+    if (err) {
+      throw res.status(500).json({ error: 'an unexpected error occured.' });
+    } else {
+      res.status(code).json(json);
+    }
+  });
+}
 
 app.listen(3000, () => {
   // eslint-disable-next-line no-console
