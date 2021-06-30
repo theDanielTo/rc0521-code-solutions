@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const fs = require('fs');
 const data = require('./data.json');
 
 app.get('/api/notes', (req, res) => {
@@ -19,29 +20,38 @@ app.get('/api/notes/:id', (req, res) => {
 app.use(express.json());
 
 app.post('/api/notes', (req, res, err) => {
-  if (res.statusCode !== 200) {
-    throw res.status(500).json({ error: 'an unexpected error occured.' });
-  }
-  if (req.body.content === '') {
+  if (!req.body.content) {
     res.status(400).json({ error: 'content is a required field' });
   } else {
     const noteObj = req.body;
     noteObj.id = data.nextId;
     data.notes[data.nextId++] = noteObj;
-    res.status(201).json(noteObj);
+    const dataJson = JSON.stringify(data, null, 2);
+    fs.writeFile('./data.json', dataJson, 'utf8', err => {
+      if (err) {
+        throw res.status(500).json({ error: 'an unexpected error occured.' });
+      } else {
+        res.status(201).json(noteObj);
+      }
+    });
   }
 });
 
 app.delete('/api/notes/:id', (req, res) => {
-  if (res.statusCode !== 200) {
-    res.status(500).json({ error: 'an unexpected error occured.' });
-  } else if (req.params.id < 0 || isNaN(req.params.id)) {
+  if (req.params.id < 0 || isNaN(req.params.id)) {
     res.status(400).json({ error: 'id must be a positive number' });
   } else if (!data.notes[req.params.id]) {
     res.status(404).json({ error: 'no notes with that id' });
   } else {
     delete data.notes[req.params.id];
-    res.status(204).json(req.body);
+    const dataJson = JSON.stringify(data, null, 2);
+    fs.writeFile('./data.json', dataJson, 'utf8', err => {
+      if (err) {
+        throw res.status(500).json({ error: 'an unexpected error occured.' });
+      } else {
+        res.status(204).json(req.body);
+      }
+    });
   }
 });
 
@@ -50,7 +60,7 @@ app.put('/api/notes/:id', (req, res) => {
     res.status(500).json({ error: 'an unexpected error occured.' });
   } else if (req.params.id < 0 || isNaN(req.params.id)) {
     res.status(400).json({ error: 'id must be a positive number' });
-  } else if (req.body.content === '') {
+  } else if (!req.body.content) {
     res.status(400).json({ error: 'content is a required field' });
   } else if (!data.notes[req.params.id]) {
     res.status(404).json({ error: 'no notes with that id' });
@@ -58,7 +68,14 @@ app.put('/api/notes/:id', (req, res) => {
     const noteObj = req.body;
     noteObj.id = parseInt(req.params.id);
     data.notes[req.params.id] = noteObj;
-    res.status(200).json(noteObj);
+    const dataJson = JSON.stringify(data, null, 2);
+    fs.writeFile('./data.json', dataJson, 'utf8', err => {
+      if (err) {
+        throw res.status(500).json({ error: 'an unexpected error occured.' });
+      } else {
+        res.status(200).json(noteObj);
+      }
+    });
   }
 });
 
