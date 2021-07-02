@@ -1,6 +1,6 @@
 SELECT  "firstName", "lastName",
-        sum(*) AS "totalAmountPaid"
+        sum("p"."amount") AS "totalAmountPaid"
   FROM  "customers"
-  JOIN  "payments" USING ("customerId")
+  JOIN  "payments" AS "p" USING ("customerId")
   GROUP BY "customerId"
   ORDER BY "totalAmountPaid" desc;
