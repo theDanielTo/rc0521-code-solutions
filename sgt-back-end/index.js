@@ -44,14 +44,12 @@ app.post('/api/grades', (req, res, next) => {
     return;
   }
 
-  const values = `
-    '${req.body.name}', '${req.body.course}', '${req.body.score}'
-  `;
   const sql = `
     INSERT INTO "grades" ("name", "course", "score")
-         VALUES (${values});
+         VALUES ($1, $2, $3);
   `;
-  db.query(sql)
+  const params = [req.body.name, req.body.course, req.body.score];
+  db.query(sql, params)
     .then(result => {
       res.status(201).json(req.body);
     })
@@ -84,17 +82,15 @@ app.put('/api/grades/:gradeId', (req, res, next) => {
     return;
   }
 
-  const updatedName = `'${req.body.name}'`;
-  const updatedCourse = `'${req.body.course}'`;
-  const updatedScore = `'${req.body.score}'`;
   const sql = `
     UPDATE "grades"
-       SET "name" = ${updatedName},
-           "course" = ${updatedCourse},
-           "score" = ${updatedScore}
-     WHERE "gradeId" = ${gradeId};
+       SET "name" = $2,
+           "course" = $3,
+           "score" = $4
+     WHERE "gradeId" = $1;
   `;
-  db.query(sql)
+  const params = [gradeId, req.body.name, req.body.course, req.body.score];
+  db.query(sql, params)
     .then(result => {
       res.status(200).json(req.body);
     })
@@ -123,9 +119,10 @@ app.delete('/api/grades/:gradeId', (req, res, next) => {
 
   const sql = `
     DELETE FROM "grades"
-          WHERE "gradeId" = ${gradeId};
+          WHERE "gradeId" = $1;
   `;
-  db.query(sql)
+  const params = [gradeId];
+  db.query(sql, params)
     .then(result => {
       res.sendStatus(204);
     })
