@@ -24,22 +24,19 @@ class HotButton extends React.Component {
     });
   }
 
+  setClass = () => {
+    if (this.state.clicks < 3) return `hot-button ${colorClass[0]}`;
+    if (this.state.clicks < 6) return `hot-button ${colorClass[1]}`;
+    if (this.state.clicks < 9) return `hot-button ${colorClass[2]}`;
+    if (this.state.clicks < 12) return `hot-button ${colorClass[3]}`;
+    if (this.state.clicks < 15) return `hot-button ${colorClass[4]}`;
+    return `hot-button ${colorClass[5]}`;
+  }
+
   render() {
-    let index = 0;
-
-    if (this.state.clicks < 3) index = 0;
-    else if (this.state.clicks < 6) index = 1;
-    else if (this.state.clicks < 9) index = 2;
-    else if (this.state.clicks < 12) index = 3;
-    else if (this.state.clicks < 15) index = 4;
-    else index = 5;
-
-    const color = colorClass[index];
-    const classes = `hot-button ${color}`;
-
     return (
       <button
-        className={classes}
+        className={this.setClass()}
         onClick={this.handleClick}>
         Hot Button
       </button>
