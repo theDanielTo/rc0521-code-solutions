@@ -6,6 +6,7 @@ body {
 }
 
 h4 {
+  margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
@@ -13,6 +14,14 @@ p {
   margin: 0;
   padding: 0;
   font-size: 0.8rem;
+}
+
+form {
+  padding: 2rem 0 0 2rem;
+}
+
+.valid-icon {
+  margin-left: 10px;
 }
 
 .hidden {
@@ -25,12 +34,4 @@ p {
 
 .color-green {
   color: green;
-}
-
-.valid-icon {
-  margin-left: 10px;
-}
-
-form {
-  margin-left: 1rem;
 }
