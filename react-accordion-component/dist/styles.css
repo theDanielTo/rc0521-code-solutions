@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.container {
+  max-width: 400px;
+}
+
+.topic-header,
+.topic-details {
+  padding: 0 15px;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.topic-header {
+  background-color: rgb(255, 219, 164);
+  cursor: pointer;
+}
+
+.topic-header:hover {
+  background-color: rgb(255, 200, 118);
+}
+
+.hidden {
+  display: none;
+}
