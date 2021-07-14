@@ -9,16 +9,30 @@ export default class Topic extends React.Component {
   }
 
   handleClick = e => {
-    this.props.onTopicClick(this.props.topicId);
-    this.setState({ clicked: !this.state.clicked });
+    if (e.target.tagName === 'H2') {
+      this.props.onTopicClick(e.target.closest('.topic-header').id);
+    } else {
+      this.props.onTopicClick(e.target.id);
+    }
+
+    this.setState({
+      clicked: !this.state.clicked
+    });
+  }
+
+  setTopicState = () => {
+    if (this.props.clicked) this.setState({ clicked: true });
+    else this.setState({ clicked: false });
   }
 
   render() {
     const visible = this.state.clicked ? '' : 'hidden';
+    this.setTopicState();
     return (
       <div className="topic">
         <div
           className="topic-header"
+          id={this.props.id}
           onClick={this.handleClick}>
           <h2>{this.props.header}</h2>
         </div>

@@ -9,23 +9,27 @@ export default class Accordion extends React.Component {
     };
   }
 
-  handleClick = () => {
-    this.setState({ topicClicked: this.props.topics.topicId });
+  handleClick = id => {
+    this.setState({ topicClicked: id });
   }
 
   fillAccordion = () => {
     const topics = this.props.topics;
-    return topics.map((topic, index) =>
-      <Topic
-        key={index}
-        header={topic.header}
-        details={topic.details}
-        onTopicClick={this.handleClick} />
-    );
+    return topics.map(topic => {
+      const clicked = (topic.id === parseInt(this.state.topicClicked));
+      return (
+        <Topic
+          key={topic.id}
+          header={topic.header}
+          details={topic.details}
+          id={topic.id}
+          clicked={clicked}
+          onTopicClick={this.handleClick} />
+      );
+    });
   }
 
   render() {
-    console.log(this.state.topicClicked);
     return (
       <div className="container">
         {this.fillAccordion()}
