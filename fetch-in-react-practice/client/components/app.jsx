@@ -38,16 +38,8 @@ export default class App extends React.Component {
   }
 
   toggleCompleted(todoId) {
-    const indexOfTodo = this.state.todos.findIndex(todo => todo.todoId === todoId);
-    const toggledCompleted = !this.state.todos[indexOfTodo].isCompleted;
-
-    const toggledTodo = this.state.todos[indexOfTodo];
-    toggledTodo.isCompleted = toggledCompleted;
-
-    const newTodosArr = this.state.todos.map(todo => {
-      if (todo.todoId === todoId) return toggledTodo;
-      return todo;
-    });
+    const foundTodo = this.state.todos.find(todo => todo.todoId === todoId);
+    const toggledCompleted = !foundTodo.isCompleted;
 
     fetch(`/api/todos/${todoId}`, {
       method: 'PATCH',
@@ -57,9 +49,14 @@ export default class App extends React.Component {
       body: JSON.stringify({ isCompleted: toggledCompleted })
     })
       .then(res => res.json())
-      .then(todo => this.setState({
-        todos: newTodosArr
-      }))
+      .then(updatedTodo => {
+        const newTodosArr = this.state.todos.map(todo => {
+          if (todo.todoId === todoId) return updatedTodo;
+          return todo;
+        });
+
+        this.setState({ todos: newTodosArr });
+      })
       .catch(err => console.error(err));
   }
 
