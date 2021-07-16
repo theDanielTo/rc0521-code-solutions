@@ -2,7 +2,7 @@ import React from 'react';
 
 function ImageShift(props) {
   function handleClick(e) {
-    if (e.target.className === 'fa-chevron-circle-left') {
+    if (e.target.classList.contains('fa-chevron-circle-left')) {
       props.onArrowClick('left');
     } else {
       props.onArrowClick('right');
@@ -13,8 +13,8 @@ function ImageShift(props) {
     <div className="carousel">
       <i className="fas fa-chevron-circle-left"
         onClick={handleClick} />
-      <img src="../dist/images/001.png"
-        alt="Bulbasaur" />
+      <img src={props.src}
+        alt={props.alt} />
       <i className="fas fa-chevron-circle-right"
         onClick={handleClick} />
     </div>

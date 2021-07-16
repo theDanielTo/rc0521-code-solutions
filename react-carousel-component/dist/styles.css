@@ -10,7 +10,7 @@
   margin-top: 7rem;
   padding: 3rem;
   width: 40%;
-  min-width: 400px;
+  min-width: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,15 +37,30 @@ i {
   cursor: pointer;
 }
 
-.carousel > i {
+.carousel i {
   margin: 6rem;
 }
 
+i:hover,
+.carousel i:hover {
+  color: hsl(37, 57%, 50%);
+}
+
 img {
-  width: 60%;
+  background-color: hsl(37, 57%, 95%);
+  float: left;
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+  border-radius: 20px;
+  border: 1px solid black;
 }
 
 @media screen and (max-width: 1200px) {
+  .container {
+    min-width: 400px;
+  }
+
   h1 {
     font-size: 2rem;
   }
@@ -54,7 +69,12 @@ img {
     font-size: 1.5rem;
   }
 
+  .carousel i {
+    margin: 3rem;
+  }
+
   img {
-    width: 30%;
+    width: 200px;
+    height: 200px;
   }
 }

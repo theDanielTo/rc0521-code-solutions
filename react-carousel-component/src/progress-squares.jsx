@@ -1,22 +1,29 @@
 import React from 'react';
 
-function ProgressSquares() {
+function ProgressSquares(props) {
   function handleClick(e) {
-    e.target.classList.remove = 'fas';
+    props.onSquareClick(e.target.id);
+  }
+
+  function fillSquares() {
+    const squares = [];
+    for (let i = 0; i < 5; i++) {
+      const filledGlass = (i === parseInt(props.slot))
+        ? 'fas'
+        : '';
+      squares.push(
+        <i className={'far fa-square ' + filledGlass}
+          id={i}
+          key={i}
+          onClick={handleClick} />
+      );
+    }
+    return squares;
   }
 
   return (
     <div className="progress-squares">
-      <i className="far fa-square fas"
-        onClick={handleClick} />
-      <i className="far fa-square"
-        onClick={handleClick} />
-      <i className="far fa-square"
-        onClick={handleClick} />
-      <i className="far fa-square"
-        onClick={handleClick} />
-      <i className="far fa-square"
-        onClick={handleClick} />
+      {fillSquares()}
     </div>
   );
 }
