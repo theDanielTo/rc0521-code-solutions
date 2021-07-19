@@ -9,13 +9,8 @@ function authorizationMiddleware(req, res, next) {
     req.user = payload;
     next();
   } catch (err) {
-    console.error(err);
+    next(err);
   }
-  /**
-    * References:
-    * https://nodejs.org/api/http.html#http_message_headers
-    * https://github.com/auth0/node-jsonwebtoken#jwtverifytoken-secretorpublickey-options-callback
-    */
 }
 
 module.exports = authorizationMiddleware;
