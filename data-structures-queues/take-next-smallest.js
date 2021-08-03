@@ -18,8 +18,9 @@ function takeNextSmallest(queue) {
     }
   }
 
-  container.splice(container.length - 1, 1);
-  for (const elem of container) queue.enqueue(elem);
+  // container.splice(container.length - 1, 1);
+  // for (const elem of container) queue.enqueue(elem);
+  for (let i = 0; i < container.length - 1; i++) queue.enqueue(container[i]);
 
   return lastVal;
 }
