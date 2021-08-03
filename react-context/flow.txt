@@ -1,0 +1,11 @@
+1. The user opens the app, app.jsx will begin authorization
+2. If there isn't a jwt stored, user will be 'null' and the page will be directed to <Home />
+3. Inside of <Home />, if user is 'null', the browser will be re-directed to <Redirect to="sign-in" /> which brings the browser to <Auth /> while changing the route.path to 'sign-in'
+4. The user can now register for an account.
+5. After clicking the 'Register' button, handleSubmit in 'auth-form.jsx' is called to fetch a request on the HTTP pipeline.
+6. Inside 'index.js', the end-point for '/api/auth/sign-up' INSERTS the 'username' and the argon2 'hashedPassword' into the 'users' table of the reactContext DB.
+7. If sign-up is successful, window.location.hash gets assigned 'sign-in'.
+8. After the user enters the account username & password, fetch now gets called with '/api/auth/sign-in' to verify the username/password is correct.
+9. After the user signs in, the token gets saved to local-storage with handleSignIn() which is a context method.
+10. <App /> gets rendered one last time to render <Home /> with context.user holding the user's infor.
+11. The user can now click "Sign out" to removed the token from local-storage. (Go back to step 4 or 8)
